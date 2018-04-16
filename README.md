@@ -1,14 +1,14 @@
 # docker-texlive
 
-# Example Usage
+## Example Usage
 
-  # Output a pdf
+### Output a PDF
     docker run --rm -v $(pwd):/work -w /work -it latex rubber --dq report.tex
   
-  # Clean project files
+### Clean project files
     docker run --rm -v $(pwd):/work -w /work -it latex rubber --clean report.tex
   
-# With a Makefile
+### With a Makefile
 
     all: 
 	    docker run --rm -v $(shell pwd):/work -w /work -t latex rubber -dq report.tex
